@@ -3,8 +3,8 @@
  * Responsive Card Grid Directory (Mobile-First, Zero Emojis)
  * - neobrutalism: High-contrast 2.5px black borders, yellow/cream palette #fffbeb, 4px hard drop shadows
  * - monochrome: Pure high-contrast black terminal HUD, hairline borders, CRT microgrid
- * - swiss-bento: Space Grotesk typography, subtle bento card hierarchy, clean slate #f8fafc
- * - warm-paper: Tactile risograph warm paper #f6f1eb, dashed sepia borders, riso rust #c2410c
+ * - blueprint: High-density technical blueprint / CAD schematic, cyan grid, amber telemetry
+ * - dark-luxury: Dark luxury / fintech minimalist glass, obsidian canvas, emerald & champagne glow
  * -------------------------------------------------------------------------- */
 
 :root {
@@ -303,295 +303,324 @@ body[data-theme="monochrome"] .btn-download:hover {
 }
 
 /* ==========================================================================
-   THEME 3: SWISS BENTO / INTERNATIONAL TYPOGRAPHIC
-   Ultra-clean slate canvas (#f8fafc), 1px razor-sharp borders (#e2e8f0),
-   Space Grotesk typography, subtle asymmetric bento hierarchy, cobalt links.
+   THEME 3: INDUSTRIAL BLUEPRINT / TECHNICAL CAD SCHEMATIC
+   Deep blueprint navy #081626 canvas, drafting grid (24px minor, 120px major),
+   hairline cyan framing #1e456e, amber telemetry highlights #f59e0b,
+   precision JetBrains Mono typography with technical bracket accents.
    ========================================================================== */
-body[data-theme="swiss-bento"] {
-  background-color: #f8fafc;
-  color: #0f172a;
-  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+body[data-theme="blueprint"] {
+  background-color: #081626;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px, 120px 120px, 120px 120px;
+  color: #e2f1ff;
+  font-family: var(--font-sans);
 }
 
-body[data-theme="swiss-bento"] .masthead {
-  background: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+body[data-theme="blueprint"] .masthead {
+  background: #0b1f36;
+  border-bottom: 1.5px solid #1e456e;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
-body[data-theme="swiss-bento"] .brand-mark {
-  background: #0f172a;
+body[data-theme="blueprint"] .brand-mark {
+  background: #0284c7;
+  border: 1.5px solid #38bdf8;
   color: #ffffff;
-  border: 1px solid #0f172a;
-  border-radius: 8px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
 }
 
-body[data-theme="swiss-bento"] .brand-name {
-  font-family: "Space Grotesk", sans-serif;
+body[data-theme="blueprint"] .brand-name {
+  font-family: var(--font-mono);
   font-weight: 700;
-  letter-spacing: -0.03em;
-  color: #0f172a;
+  letter-spacing: 0.04em;
+  color: #38bdf8;
 }
 
-body[data-theme="swiss-bento"] .hero-title {
-  color: #0f172a;
-  font-family: "Space Grotesk", sans-serif;
+body[data-theme="blueprint"] .hero-title {
+  color: #f0f9ff;
+  font-family: var(--font-mono);
   font-weight: 700;
-  letter-spacing: -0.04em;
-  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+  font-size: 2.35rem;
 }
 
-body[data-theme="swiss-bento"] .hero-lead {
-  color: #475569;
-  font-family: "Space Grotesk", sans-serif;
+body[data-theme="blueprint"] .hero-lead {
+  color: #93c5fd;
+  font-family: var(--font-sans);
   font-size: 1.05rem;
   line-height: 1.6;
 }
 
-body[data-theme="swiss-bento"] .app-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
+body[data-theme="blueprint"] .app-card {
+  background: #0c233c;
+  border: 1.5px solid #1e456e;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-body[data-theme="swiss-bento"] .app-card:hover {
-  border-color: #cbd5e1;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+body[data-theme="blueprint"] .app-card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
 }
 
-body[data-theme="swiss-bento"] .card-icon {
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
+body[data-theme="blueprint"] .card-icon {
+  background: #081626;
+  border: 1.5px solid #38bdf8;
+  border-radius: 4px;
+  color: #38bdf8;
 }
 
-body[data-theme="swiss-bento"] .card-title {
-  color: #0f172a;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 1.12rem;
-  letter-spacing: -0.02em;
-}
-
-body[data-theme="swiss-bento"] .card-version {
-  background: #f1f5f9;
-  color: #475569;
-  border: 1px solid #e2e8f0;
+body[data-theme="blueprint"] .card-title {
+  color: #ffffff;
   font-family: var(--font-mono);
-  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
+body[data-theme="blueprint"] .card-version {
+  background: #082f49;
+  color: #38bdf8;
+  border: 1px solid #0284c7;
+  font-family: var(--font-mono);
+  border-radius: 3px;
   font-size: 0.68rem;
 }
 
-body[data-theme="swiss-bento"] .card-category {
-  color: #64748b;
-  font-family: "Space Grotesk", sans-serif;
-  letter-spacing: 0.06em;
-  font-weight: 600;
+body[data-theme="blueprint"] .card-category {
+  color: #f59e0b;
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  font-weight: 700;
 }
 
-body[data-theme="swiss-bento"] .card-tagline {
-  color: #334155;
-  font-family: "Space Grotesk", sans-serif;
+body[data-theme="blueprint"] .card-tagline {
+  color: #bae6fd;
+  font-family: var(--font-sans);
   font-size: 0.92rem;
   line-height: 1.55;
 }
 
-body[data-theme="swiss-bento"] .card-foot {
-  border-top: 1px solid #f1f5f9;
+body[data-theme="blueprint"] .card-foot {
+  border-top: 1px solid #1e456e;
 }
 
-body[data-theme="swiss-bento"] .card-tech {
-  color: #64748b;
+body[data-theme="blueprint"] .card-tech {
+  color: #7dd3fc;
   font-family: var(--font-mono);
   font-size: 0.7rem;
 }
 
-body[data-theme="swiss-bento"] .card-links a {
-  color: #2563eb;
-  font-family: "Space Grotesk", sans-serif;
+body[data-theme="blueprint"] .card-links a {
+  color: #38bdf8;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body[data-theme="blueprint"] .card-links a:hover {
+  color: #f0f9ff;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+
+body[data-theme="blueprint"] .btn-lock-auth {
+  background: #081626;
+  border: 1.5px solid #1e456e;
+  color: #93c5fd;
+  font-family: var(--font-mono);
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+body[data-theme="blueprint"] .btn-lock-auth:hover {
+  background: #0f2d4d;
+  color: #ffffff;
+  border-color: #38bdf8;
+}
+
+body[data-theme="blueprint"] .btn-download {
+  background: #0284c7;
+  border: 1.5px solid #38bdf8;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
+}
+
+body[data-theme="blueprint"] .btn-download:hover {
+  background: #0369a1;
+  border-color: #7dd3fc;
+}
+
+/* ==========================================================================
+   THEME 4: DARK LUXURY / FINTECH MINIMALIST GLASS
+   Obsidian #08090d canvas with emerald & champagne ambient radial glow,
+   smoked frosted glass cards (backdrop-filter blur 16px), luminous emerald #10b981
+   accents, refined Plus Jakarta Sans typography.
+   ========================================================================== */
+body[data-theme="dark-luxury"] {
+  background-color: #08090d;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.08), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(212, 175, 55, 0.04), transparent 60%);
+  color: #f1f5f9;
+  font-family: var(--font-sans);
+}
+
+body[data-theme="dark-luxury"] .masthead {
+  background: rgba(13, 15, 22, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body[data-theme="dark-luxury"] .brand-mark {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+}
+
+body[data-theme="dark-luxury"] .brand-name {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+body[data-theme="dark-luxury"] .hero-title {
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  font-size: 2.6rem;
+}
+
+body[data-theme="dark-luxury"] .hero-lead {
+  color: #94a3b8;
+  font-family: var(--font-sans);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+body[data-theme="dark-luxury"] .app-card {
+  background: rgba(18, 21, 31, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body[data-theme="dark-luxury"] .app-card:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 24px rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+}
+
+body[data-theme="dark-luxury"] .card-icon {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 10px;
+  color: #10b981;
+}
+
+body[data-theme="dark-luxury"] .card-title {
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+body[data-theme="dark-luxury"] .card-version {
+  background: rgba(255, 255, 255, 0.06);
+  color: #a1a1aa;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--font-mono);
+  border-radius: 999px;
+  font-size: 0.68rem;
+}
+
+body[data-theme="dark-luxury"] .card-category {
+  color: #10b981;
+  font-family: var(--font-sans);
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+body[data-theme="dark-luxury"] .card-tagline {
+  color: #cbd5e1;
+  font-family: var(--font-sans);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+body[data-theme="dark-luxury"] .card-foot {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body[data-theme="dark-luxury"] .card-tech {
+  color: #71717a;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+body[data-theme="dark-luxury"] .card-links a {
+  color: #10b981;
+  font-family: var(--font-sans);
   font-weight: 600;
   font-size: 0.8rem;
   text-decoration: none;
 }
 
-body[data-theme="swiss-bento"] .card-links a:hover {
-  text-decoration: underline;
-  color: #1d4ed8;
-}
-
-body[data-theme="swiss-bento"] .btn-lock-auth {
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
-  color: #475569;
-  font-family: "Space Grotesk", sans-serif;
-  border-radius: 8px;
-  font-weight: 600;
-}
-
-body[data-theme="swiss-bento"] .btn-lock-auth:hover {
-  background: #f1f5f9;
-  color: #0f172a;
-}
-
-body[data-theme="swiss-bento"] .btn-download {
-  background: #0f172a;
-  border: 1px solid #0f172a;
-  color: #ffffff;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 600;
-  border-radius: 8px;
-}
-
-body[data-theme="swiss-bento"] .btn-download:hover {
-  background: #1e293b;
-}
-
-/* ==========================================================================
-   THEME 4: WARM PAPER / TACTILE RISOGRAPH
-   Warm fibrous newsprint #f6f1eb canvas, earthy sepia #2e2620 ink,
-   dashed sepia borders #d8cfc4, tactile riso rust (#c2410c) accents, Newsreader serif.
-   ========================================================================== */
-body[data-theme="warm-paper"] {
-  background-color: #f6f1eb;
-  background-image: radial-gradient(rgba(120, 100, 80, 0.08) 1px, transparent 0);
-  background-size: 16px 16px;
-  color: #2e2620;
-  font-family: var(--font-serif);
-}
-
-body[data-theme="warm-paper"] .masthead {
-  background: #efe8de;
-  border-bottom: 2px dashed #cfc4b4;
-}
-
-body[data-theme="warm-paper"] .brand-mark {
-  background: #c2410c;
-  border: 1.5px solid #2e2620;
-  color: #f6f1eb;
-  border-radius: 4px;
-}
-
-body[data-theme="warm-paper"] .brand-name {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: #2e2620;
-}
-
-body[data-theme="warm-paper"] .hero-title {
-  color: #2e2620;
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-style: italic;
-  font-size: 2.65rem;
-}
-
-body[data-theme="warm-paper"] .hero-lead {
-  color: #5c4f44;
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  line-height: 1.7;
-}
-
-body[data-theme="warm-paper"] .app-card {
-  background: #fffdf9;
-  border: 1.5px dashed #cfc4b4;
-  border-radius: 6px;
-  box-shadow: 2px 2px 0px rgba(120, 100, 80, 0.15);
-}
-
-body[data-theme="warm-paper"] .app-card:hover {
-  border-style: solid;
-  border-color: #8c7866;
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0px rgba(120, 100, 80, 0.2);
-}
-
-body[data-theme="warm-paper"] .card-icon {
-  background: #efe7dd;
-  border: 1px solid #cfc4b4;
-  border-radius: 6px;
-  color: #c2410c !important;
-}
-
-body[data-theme="warm-paper"] .card-title {
-  color: #2e2620;
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-body[data-theme="warm-paper"] .card-version {
-  background: #efe7dd;
-  color: #786555;
-  border: 1px solid #cfc4b4;
-  font-family: var(--font-mono);
-  border-radius: 4px;
-}
-
-body[data-theme="warm-paper"] .card-category {
-  color: #c2410c;
-  font-family: var(--font-sans);
-  letter-spacing: 0.08em;
-  font-weight: 700;
-}
-
-body[data-theme="warm-paper"] .card-tagline {
-  color: #4a3e35;
-  font-family: var(--font-serif);
-  font-size: 0.96rem;
-  line-height: 1.6;
-}
-
-body[data-theme="warm-paper"] .card-foot {
-  border-top: 1px dashed #d8cfc4;
-}
-
-body[data-theme="warm-paper"] .card-tech {
-  color: #8c7a6b;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-}
-
-body[data-theme="warm-paper"] .card-links a {
-  color: #9a3412;
-  font-family: var(--font-serif);
-  font-weight: 600;
+body[data-theme="dark-luxury"] .card-links a:hover {
+  color: #34d399;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-body[data-theme="warm-paper"] .card-links a:hover {
-  color: #c2410c;
+body[data-theme="dark-luxury"] .btn-lock-auth {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+  border-radius: 8px;
+  font-weight: 600;
 }
 
-body[data-theme="warm-paper"] .btn-lock-auth {
-  background: #fffdf9;
-  border: 1.5px solid #8c7a6b;
-  color: #4a3e35;
-  font-family: var(--font-serif);
-  border-radius: 4px;
+body[data-theme="dark-luxury"] .btn-lock-auth:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #ffffff;
 }
 
-body[data-theme="warm-paper"] .btn-lock-auth:hover {
-  background: #efe8de;
-  color: #2e2620;
-}
-
-body[data-theme="warm-paper"] .btn-download {
-  background: #c2410c;
-  border: 1.5px solid #7c2d12;
+body[data-theme="dark-luxury"] .btn-download {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
   font-family: var(--font-sans);
   font-weight: 700;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
 }
 
-body[data-theme="warm-paper"] .btn-download:hover {
-  background: #9a3412;
+body[data-theme="dark-luxury"] .btn-download:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.5);
 }
 
 /* ==========================================================================
@@ -880,19 +909,22 @@ body[data-theme="neobrutalism"] .dialog-frame {
   box-shadow: 6px 6px 0px #000000;
 }
 
-body[data-theme="swiss-bento"] .dialog-frame {
-  background: #ffffff;
-  color: #0f172a;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.1);
+body[data-theme="blueprint"] .dialog-frame {
+  background: #0d2238;
+  color: #e2f1ff;
+  border: 1.5px solid #38bdf8;
+  border-radius: 4px;
+  box-shadow: 0 0 24px rgba(56, 189, 248, 0.25), inset 0 0 12px rgba(56, 189, 248, 0.1);
 }
 
-body[data-theme="warm-paper"] .dialog-frame {
-  background: #fffdf9;
-  color: #2e2620;
-  border: 1.5px dashed #cfc4b4;
-  box-shadow: 4px 4px 0px rgba(120, 100, 80, 0.2);
+body[data-theme="dark-luxury"] .dialog-frame {
+  background: rgba(16, 18, 27, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 30px rgba(16, 185, 129, 0.15);
 }
 
 .dialog-frame h3 {
