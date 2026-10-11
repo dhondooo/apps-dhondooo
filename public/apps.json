@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Car Logs",
+    "slug": "car-logs",
+    "tagline": "Vehicle maintenance, fuel and running cost tracker",
+    "badge": "v1.0.0",
+    "color": "#0e7490",
+    "icon": "car",
+    "desc": "A complete offline service history and mileage tracker for all your vehicles. Zero signups, zero tracking.",
+    "docsUrl": "https://car-logs.pages.dev",
+    "apkUrl": "https://github.com/dhondooo/car-logs/releases/download/latest/app-release.apk"
+  },
+  {
+    "name": "IRL Camera Tools",
+    "slug": "irlcameratools",
+    "tagline": "Live streamer camera companion & scene telemetry",
+    "badge": "v1.0.0",
+    "color": "#6366f1",
+    "icon": "camera",
+    "desc": "Essential streaming tools, remote camera monitoring, and bitrate health overlays for IRL streamers.",
+    "docsUrl": "https://irlcameratools.pages.dev",
+    "apkUrl": "https://github.com/dhondooo/IRLCameraTools/releases/download/latest/app-release.apk"
+  },
+  {
+    "name": "Kirkut",
+    "slug": "kirkut",
+    "tagline": "Real-time cricket live scores, ball-by-ball updates & stats",
+    "badge": "v1.0.0",
+    "color": "#16a34a",
+    "icon": "activity",
+    "desc": "Clean, ultra-fast cricket scoring companion with comprehensive tournament brackets and match telemetry.",
+    "docsUrl": "https://kirkut.pages.dev",
+    "apkUrl": "https://github.com/dhondooo/Kirkut/releases/download/latest/app-release.apk"
+  },
+  {
+    "name": "Fire Tracker",
+    "slug": "fire-tracker",
+    "tagline": "Wildfire and thermal anomaly mapping companion",
+    "badge": "v1.0.0",
+    "color": "#ea580c",
+    "icon": "flame",
+    "desc": "Real-time thermal hotspot alerts, active wildfire perimeters, and localized air quality metrics.",
+    "docsUrl": "https://fire-tracker.pages.dev",
+    "apkUrl": "https://github.com/dhondooo/fire-tracker/releases/download/latest/app-release.apk"
+  },
+  {
+    "name": "Shandaar Sale",
+    "slug": "shandaar-sale-app",
+    "tagline": "Verified discounts, deals & verified price alert engine",
+    "badge": "v1.0.0",
+    "color": "#dc2626",
+    "icon": "shopping-bag",
+    "desc": "Automated verified retail deals, coupon catalog, and instant price drop telemetry.",
+    "docsUrl": "https://shandaar-sale-app.pages.dev",
+    "apkUrl": "https://github.com/dhondooo/shandaar-sale/releases/download/latest/app-release.apk"
+  },
+  {
+    "name": "Credit Card Analyzer",
+    "slug": "credit-card-statement-analyzer",
+    "tagline": "Offline statement parser, spending intelligence & fee audit",
+    "badge": "v1.0.0",
+    "color": "#2563eb",
+    "icon": "credit-card",
+    "desc": "Parse and categorize PDF statements locally in your browser and on mobile. Zero cloud data storage.",
+    "docsUrl": "https://credit-card-statement-analyzer.pages.dev",
+    "apkUrl": "https://github.com/dhondooo/credit-card-statement-analyzer/releases/download/latest/app-release.apk"
+  },
+  {
+    "name": "OpenRay",
+    "slug": "openray",
+    "tagline": "Open mobile radiometry, solar & radiation monitor",
+    "badge": "v1.0.0",
+    "color": "#d97706",
+    "icon": "sun",
+    "desc": "Connects with ambient environmental radiation sensors and open radiation monitor networks.",
+    "docsUrl": "https://openray.pages.dev",
+    "apkUrl": "https://github.com/dhondooo/openray/releases/download/latest/app-release.apk"
+  },
+  {
+    "name": "Touch Grass",
+    "slug": "touch-grass",
+    "tagline": "Mindful outdoor habit tracker & digital wellness companion",
+    "badge": "v1.0.0",
+    "color": "#059669",
+    "icon": "compass",
+    "desc": "Encourages mindful screen-free breaks, nature walks, and outdoor streak journaling.",
+    "docsUrl": "https://touch-grass.pages.dev",
+    "apkUrl": "https://github.com/dhondooo/touch-grass/releases/download/latest/app-release.apk"
+  },
+  {
+    "name": "Apni Awaz",
+    "slug": "apni-awaz",
+    "tagline": "Encrypted offline audio recording, voice notes & sound archive",
+    "badge": "v1.0.0",
+    "color": "#7c3aed",
+    "icon": "mic",
+    "desc": "High-fidelity audio recording with noise suppression and zero-telemetry local encrypted storage.",
+    "docsUrl": "https://apni-awaz.pages.dev",
+    "apkUrl": "https://github.com/dhondooo/apni-awaz/releases/download/latest/app-release.apk"
+  }
+]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dhondooo Apps Portal</title>
+  <meta name="description" content="Discover, explore, and download native applications built and published by Dhondooo.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-logo">📦</div>
+        <div>
+          <h1>Dhondooo Apps</h1>
+          <p class="brand-sub">Independent, zero-tracking mobile & web applications</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="lockToggleBtn" class="lock-btn" title="Unlock internal builds">
+          <span id="lockIcon">🔒</span>
+          <span id="lockText">Locked</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="intro-bar">
+      <h2>Applications Directory</h2>
+      <p>Explore privacy-first mobile apps, legal documentation, and release artifacts.</p>
+    </div>
+
+    <!-- PIN Unlock Modal -->
+    <div id="pinModal" class="modal-backdrop hidden">
+      <div class="modal-card">
+        <h3>Unlock Internal Builds</h3>
+        <p>Enter the security PIN configured for this environment to reveal private build artifacts and APK download targets.</p>
+        <form id="pinForm">
+          <input type="password" id="pinInput" placeholder="Enter PIN" autocomplete="off" required>
+          <div id="pinError" class="error-msg hidden"></div>
+          <div class="modal-actions">
+            <button type="button" id="modalCancelBtn" class="btn-secondary">Cancel</button>
+            <button type="submit" class="btn-primary">Unlock</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="apps-grid" id="appsGrid">
+      <!-- Injected dynamically via app.js -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Dhondooo &bull; Zero Telemetry &bull; Privacy by Architecture</p>
+      <p class="contact-line">Support & Inquiries: <!--email_off--><a href="mailto:contact@apps.dhondooo.com">contact@apps.dhondooo.com</a><!--/email_off--></p>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
