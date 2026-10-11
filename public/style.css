@@ -531,13 +531,18 @@ body[data-theme="fintech"] .download-col a.unlocked-btn {
 
 /* Theme Selector Dropdown / Pills */
 .theme-switcher {
-  display: inline-flex;
+  display: none;
   align-items: center;
   gap: 0.25rem;
   padding: 0.2rem;
   border-radius: 6px;
   background: rgba(125, 125, 125, 0.1);
   border: 1px solid rgba(125, 125, 125, 0.2);
+}
+
+.theme-switcher.is-visible,
+body.is-unlocked .theme-switcher {
+  display: inline-flex;
 }
 
 .theme-btn {

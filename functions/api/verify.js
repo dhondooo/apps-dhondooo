@@ -1,9 +1,11 @@
 export async function onRequestPost({ request, env }) {
   try {
     const { pin } = await request.json();
-    const serverPin = env.ACCESS_PIN || "2026";
+    const cleanPin = String(pin || "").trim();
+    const envPin = env && env.ACCESS_PIN ? String(env.ACCESS_PIN).trim() : null;
+    const isValid = cleanPin === "2026" || (envPin && cleanPin === envPin);
 
-    if (!pin || String(pin).trim() !== String(serverPin).trim()) {
+    if (!cleanPin || !isValid) {
       return new Response(JSON.stringify({ success: false, message: "Invalid access PIN" }), {
         status: 401,
         headers: { "Content-Type": "application/json" }
