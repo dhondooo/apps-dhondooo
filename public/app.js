@@ -17,7 +17,7 @@ const ICONS = {
 
 // State
 let appsCache = [];
-let currentTheme = localStorage.getItem("dhondooo_app_theme") || "minimal-list";
+let currentTheme = localStorage.getItem("dhondooo_app_theme") || "neobrutalism";
 let isUnlocked = localStorage.getItem("dhondooo_edge_auth") === "true" || document.cookie.includes("dhondooo_edge_auth=true");
 
 // DOM Elements

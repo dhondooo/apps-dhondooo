@@ -1,15 +1,16 @@
 /* --------------------------------------------------------------------------
  * Master Theme Architecture: 4 Distinct Design Personalities
  * Responsive Card Grid Directory (Mobile-First, Zero Emojis)
- * - minimal-list: Ultra-clean directory cards inspired by Linear & Vercel
- * - terminal: Monospace developer index inspired by GitHub CLI & Raycast
- * - neobrutalism: High-contrast, sharp offset shadow inspired by Gumroad
- * - fintech: Razor-sharp slate/charcoal luxury inspired by Mercury & Stripe
+ * - neobrutalism: High-contrast 2.5px black borders, yellow/cream palette #fffbeb, 4px hard drop shadows
+ * - cyberdeck: Retro Cyberdeck / Y2K (neon green #00ff66 / cyan, dark grid #0a0f0d, scanlines)
+ * - editorial: Warm Editorial Serif (literary craftsmanship, warm stone/linen #fcfaf7, Newsreader serif)
+ * - bauhaus: Industrial Bauhaus / Swiss Grid (bold primary accents #e11d48 / #2563eb, stark contrast)
  * -------------------------------------------------------------------------- */
 
 :root {
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, Menlo, Monaco, Consolas, monospace;
+  --font-serif: "Newsreader", Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
 }
 
 *, *::before, *::after {
@@ -28,221 +29,8 @@ body {
 }
 
 /* ==========================================================================
-   THEME 1: MINIMAL (Default)
-   Linear / Vercel style. Clean high-density cards, slate typography.
-   ========================================================================== */
-body[data-theme="minimal-list"] {
-  background-color: #f8fafc;
-  color: #0f172a;
-}
-
-body[data-theme="minimal-list"] .masthead {
-  background: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-body[data-theme="minimal-list"] .brand-mark {
-  background: #0f172a;
-  color: #ffffff;
-  border: 1px solid #0f172a;
-  border-radius: 6px;
-}
-
-body[data-theme="minimal-list"] .hero-title {
-  color: #0f172a;
-}
-
-body[data-theme="minimal-list"] .hero-lead {
-  color: #64748b;
-}
-
-body[data-theme="minimal-list"] .app-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-}
-
-body[data-theme="minimal-list"] .app-card:hover {
-  border-color: #cbd5e1;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-body[data-theme="minimal-list"] .card-icon {
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-}
-
-body[data-theme="minimal-list"] .card-title {
-  color: #0f172a;
-}
-
-body[data-theme="minimal-list"] .card-version {
-  background: #f1f5f9;
-  color: #475569;
-  border: 1px solid #e2e8f0;
-}
-
-body[data-theme="minimal-list"] .card-category {
-  color: #64748b;
-}
-
-body[data-theme="minimal-list"] .card-tagline {
-  color: #1e293b;
-}
-
-body[data-theme="minimal-list"] .card-desc {
-  color: #64748b;
-}
-
-body[data-theme="minimal-list"] .card-foot {
-  border-top: 1px solid #f1f5f9;
-}
-
-body[data-theme="minimal-list"] .card-tech {
-  color: #94a3b8;
-}
-
-body[data-theme="minimal-list"] .card-links a {
-  color: #0284c7;
-}
-
-body[data-theme="minimal-list"] .card-links a:hover {
-  color: #0369a1;
-  text-decoration: underline;
-}
-
-body[data-theme="minimal-list"] .btn-lock-auth {
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
-  color: #475569;
-}
-
-body[data-theme="minimal-list"] .btn-lock-auth:hover {
-  background: #f8fafc;
-  color: #0f172a;
-}
-
-body[data-theme="minimal-list"] .btn-download {
-  background: #0f172a;
-  color: #ffffff;
-  border: 1px solid #0f172a;
-}
-
-body[data-theme="minimal-list"] .btn-download:hover {
-  background: #1e293b;
-}
-
-/* ==========================================================================
-   THEME 2: TERMINAL / DEVELOPER FIRST
-   Monospace-led, pitch black, Raycast & GitHub CLI telemetry.
-   ========================================================================== */
-body[data-theme="terminal"] {
-  background-color: #0d1117;
-  color: #c9d1d9;
-  font-family: var(--font-mono);
-}
-
-body[data-theme="terminal"] .masthead {
-  background: #161b22;
-  border-bottom: 1px solid #30363d;
-}
-
-body[data-theme="terminal"] .brand-mark {
-  background: #0d1117;
-  border: 1px solid #30363d;
-  color: #58a6ff;
-  border-radius: 4px;
-}
-
-body[data-theme="terminal"] .hero-title {
-  color: #58a6ff;
-}
-
-body[data-theme="terminal"] .hero-lead {
-  color: #8b949e;
-}
-
-body[data-theme="terminal"] .app-card {
-  background: #161b22;
-  border: 1px solid #30363d;
-  border-radius: 6px;
-}
-
-body[data-theme="terminal"] .app-card:hover {
-  border-color: #58a6ff;
-  background: #1c2128;
-}
-
-body[data-theme="terminal"] .card-icon {
-  background: #0d1117;
-  border: 1px solid #30363d;
-  border-radius: 4px;
-}
-
-body[data-theme="terminal"] .card-title {
-  color: #f0f6fc;
-}
-
-body[data-theme="terminal"] .card-version {
-  background: #21262d;
-  color: #79c0ff;
-  border: 1px solid #30363d;
-}
-
-body[data-theme="terminal"] .card-category {
-  color: #8b949e;
-}
-
-body[data-theme="terminal"] .card-tagline {
-  color: #58a6ff;
-}
-
-body[data-theme="terminal"] .card-desc {
-  color: #8b949e;
-}
-
-body[data-theme="terminal"] .card-foot {
-  border-top: 1px solid #21262d;
-}
-
-body[data-theme="terminal"] .card-tech {
-  color: #6e7681;
-}
-
-body[data-theme="terminal"] .card-links a {
-  color: #58a6ff;
-}
-
-body[data-theme="terminal"] .card-links a:hover {
-  text-decoration: underline;
-}
-
-body[data-theme="terminal"] .btn-lock-auth {
-  background: #21262d;
-  border: 1px solid #30363d;
-  color: #c9d1d9;
-}
-
-body[data-theme="terminal"] .btn-lock-auth:hover {
-  border-color: #58a6ff;
-  color: #f0f6fc;
-}
-
-body[data-theme="terminal"] .btn-download {
-  background: #238636;
-  border: 1px solid #2ea043;
-  color: #ffffff;
-}
-
-body[data-theme="terminal"] .btn-download:hover {
-  background: #2ea043;
-}
-
-/* ==========================================================================
-   THEME 3: NEOBRUTALISM
-   Gumroad style. Solid 2.5px borders, sharp offset shadow, tactile feel.
+   THEME 1: NEOBRUTALISM (Primary / Featured)
+   High-contrast 2.5px black borders, warm butter/cream #fffbeb, 4px hard drop shadows.
    ========================================================================== */
 body[data-theme="neobrutalism"] {
   background-color: #fffbeb;
@@ -360,110 +148,437 @@ body[data-theme="neobrutalism"] .btn-download:active {
 }
 
 /* ==========================================================================
-   THEME 4: FINTECH / MONOCHROMATIC
-   Mercury & Stripe style. Obsidian dark, razor micro-borders, glass blur.
+   THEME 2: RETRO CYBERDECK / Y2K
+   Neon green #00ff66 & phosphor cyan #00f0ff, dark grid #0a0f0d, scanlines,
+   monospace telemetry, tactile hardware switch controls.
    ========================================================================== */
-body[data-theme="fintech"] {
-  background-color: #0b0e14;
-  color: #e2e8f0;
+body[data-theme="cyberdeck"] {
+  background-color: #0a0f0d;
+  background-image: 
+    linear-gradient(rgba(0, 255, 102, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 102, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #a7f3d0;
+  font-family: var(--font-mono);
 }
 
-body[data-theme="fintech"] .masthead {
-  background: rgba(15, 20, 30, 0.9);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+body[data-theme="cyberdeck"] .masthead {
+  background: #0d1410;
+  border-bottom: 1.5px solid #00ff66;
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.15);
 }
 
-body[data-theme="fintech"] .brand-mark {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #f8fafc;
-  border-radius: 8px;
+body[data-theme="cyberdeck"] .brand-mark {
+  background: #000000;
+  border: 1.5px solid #00ff66;
+  color: #00ff66;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
 }
 
-body[data-theme="fintech"] .hero-title {
-  color: #f8fafc;
+body[data-theme="cyberdeck"] .brand-name {
+  color: #00ff66;
+  text-shadow: 0 0 6px rgba(0, 255, 102, 0.5);
 }
 
-body[data-theme="fintech"] .hero-lead {
-  color: #94a3b8;
+body[data-theme="cyberdeck"] .hero-title {
+  color: #00ff66;
+  text-shadow: 0 0 12px rgba(0, 255, 102, 0.45);
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
 }
 
-body[data-theme="fintech"] .app-card {
-  background: #0f141e;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+body[data-theme="cyberdeck"] .hero-lead {
+  color: #6ee7b7;
+  font-family: var(--font-mono);
 }
 
-body[data-theme="fintech"] .app-card:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-  background: #141a26;
+body[data-theme="cyberdeck"] .app-card {
+  background: #0d1411;
+  border: 1px solid #10b981;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: inset 0 0 12px rgba(0, 255, 102, 0.03);
 }
 
-body[data-theme="fintech"] .card-icon {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+body[data-theme="cyberdeck"] .app-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00ff66, #00f0ff);
 }
 
-body[data-theme="fintech"] .card-title {
-  color: #f8fafc;
+body[data-theme="cyberdeck"] .app-card:hover {
+  border-color: #00ff66;
+  box-shadow: 0 0 16px rgba(0, 255, 102, 0.25);
+  transform: translateY(-2px);
 }
 
-body[data-theme="fintech"] .card-version {
-  background: rgba(255, 255, 255, 0.05);
-  color: #94a3b8;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+body[data-theme="cyberdeck"] .card-icon {
+  background: #050b07;
+  border: 1px solid #00ff66;
+  border-radius: 2px;
+  color: #00ff66;
 }
 
-body[data-theme="fintech"] .card-category {
-  color: #94a3b8;
+body[data-theme="cyberdeck"] .card-title {
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-weight: 700;
 }
 
-body[data-theme="fintech"] .card-tagline {
-  color: #f1f5f9;
+body[data-theme="cyberdeck"] .card-version {
+  background: #022c16;
+  color: #00ff66;
+  border: 1px solid #00ff66;
+  font-family: var(--font-mono);
+  border-radius: 2px;
 }
 
-body[data-theme="fintech"] .card-desc {
-  color: #94a3b8;
+body[data-theme="cyberdeck"] .card-category {
+  color: #00f0ff;
+  font-family: var(--font-mono);
 }
 
-body[data-theme="fintech"] .card-foot {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+body[data-theme="cyberdeck"] .card-tagline {
+  color: #34d399;
+  font-family: var(--font-mono);
 }
 
-body[data-theme="fintech"] .card-tech {
-  color: #64748b;
+body[data-theme="cyberdeck"] .card-foot {
+  border-top: 1px dashed #064e3b;
 }
 
-body[data-theme="fintech"] .card-links a {
-  color: #38bdf8;
+body[data-theme="cyberdeck"] .card-tech {
+  color: #00f0ff;
+  font-family: var(--font-mono);
 }
 
-body[data-theme="fintech"] .card-links a:hover {
+body[data-theme="cyberdeck"] .card-links a {
+  color: #00ff66;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+
+body[data-theme="cyberdeck"] .card-links a:hover {
+  color: #00f0ff;
   text-decoration: underline;
 }
 
-body[data-theme="fintech"] .btn-lock-auth {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #e2e8f0;
+body[data-theme="cyberdeck"] .btn-lock-auth {
+  background: #050b07;
+  border: 1px solid #00ff66;
+  color: #00ff66;
+  border-radius: 2px;
+  font-family: var(--font-mono);
 }
 
-body[data-theme="fintech"] .btn-lock-auth:hover {
-  background: rgba(255, 255, 255, 0.08);
+body[data-theme="cyberdeck"] .btn-lock-auth:hover {
+  background: #00ff66;
+  color: #000000;
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
 }
 
-body[data-theme="fintech"] .btn-download {
-  background: #f8fafc;
-  border: 1px solid #f8fafc;
-  color: #0b0e14;
+body[data-theme="cyberdeck"] .btn-download {
+  background: #00ff66;
+  border: 1px solid #00ff66;
+  color: #000000;
+  font-weight: 800;
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(0, 255, 102, 0.4);
+}
+
+body[data-theme="cyberdeck"] .btn-download:hover {
+  background: #00f0ff;
+  border-color: #00f0ff;
+}
+
+/* ==========================================================================
+   THEME 3: WARM EDITORIAL SERIF
+   Refined literary craftsmanship, warm stone/linen #fcfaf7, Newsreader serif,
+   delicate hairline rules, tranquil editorial restraint.
+   ========================================================================== */
+body[data-theme="editorial"] {
+  background-color: #fcfaf7;
+  color: #292524;
+  font-family: var(--font-serif);
+}
+
+body[data-theme="editorial"] .masthead {
+  background: #fbf8f3;
+  border-bottom: 1px solid #e7e2d9;
+}
+
+body[data-theme="editorial"] .brand-mark {
+  background: #292524;
+  color: #fcfaf7;
+  border: 1px solid #292524;
+  border-radius: 3px;
+}
+
+body[data-theme="editorial"] .brand-name {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #1c1917;
+}
+
+body[data-theme="editorial"] .hero-title {
+  color: #1c1917;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2.6rem;
+}
+
+body[data-theme="editorial"] .hero-lead {
+  color: #57534e;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+body[data-theme="editorial"] .app-card {
+  background: #ffffff;
+  border: 1px solid #e7e2d9;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(41, 37, 36, 0.04);
+}
+
+body[data-theme="editorial"] .app-card:hover {
+  border-color: #a8a29e;
+  box-shadow: 0 6px 18px rgba(41, 37, 36, 0.06);
+}
+
+body[data-theme="editorial"] .card-icon {
+  background: #f5f0e8;
+  border: 1px solid #e7e2d9;
+  border-radius: 4px;
+}
+
+body[data-theme="editorial"] .card-title {
+  color: #1c1917;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.18rem;
+}
+
+body[data-theme="editorial"] .card-version {
+  background: #f5f0e8;
+  color: #78716c;
+  border: 1px solid #e7e2d9;
+  font-family: var(--font-mono);
+  border-radius: 3px;
+}
+
+body[data-theme="editorial"] .card-category {
+  color: #854d0e;
+  font-family: var(--font-sans);
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+body[data-theme="editorial"] .card-tagline {
+  color: #44403c;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+body[data-theme="editorial"] .card-foot {
+  border-top: 1px solid #f2ede4;
+}
+
+body[data-theme="editorial"] .card-tech {
+  color: #a8a29e;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+body[data-theme="editorial"] .card-links a {
+  color: #78350f;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body[data-theme="editorial"] .card-links a:hover {
+  color: #b45309;
+}
+
+body[data-theme="editorial"] .btn-lock-auth {
+  background: #ffffff;
+  border: 1px solid #d6d3d1;
+  color: #57534e;
+  font-family: var(--font-sans);
+  border-radius: 4px;
+}
+
+body[data-theme="editorial"] .btn-lock-auth:hover {
+  background: #f5f0e8;
+  color: #1c1917;
+}
+
+body[data-theme="editorial"] .btn-download {
+  background: #292524;
+  border: 1px solid #292524;
+  color: #fcfaf7;
+  font-family: var(--font-sans);
+  border-radius: 4px;
+}
+
+body[data-theme="editorial"] .btn-download:hover {
+  background: #44403c;
+}
+
+/* ==========================================================================
+   THEME 4: INDUSTRIAL BAUHAUS / SWISS GRID
+   Bold primary accents (#e11d48 crimson, #2563eb royal cobalt, #f59e0b cadmium),
+   stark white/black geometric boundaries, heavy rule dividers, asymmetric rhythm.
+   ========================================================================== */
+body[data-theme="bauhaus"] {
+  background-color: #f1f3f5;
+  color: #000000;
+  font-family: var(--font-sans);
+}
+
+body[data-theme="bauhaus"] .masthead {
+  background: #ffffff;
+  border-bottom: 3px solid #000000;
+}
+
+body[data-theme="bauhaus"] .brand-mark {
+  background: #e11d48;
+  border: 2px solid #000000;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+body[data-theme="bauhaus"] .brand-name {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+}
+
+body[data-theme="bauhaus"] .hero-title {
+  color: #000000;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  font-size: 2.75rem;
+}
+
+body[data-theme="bauhaus"] .hero-lead {
+  color: #1e293b;
+  font-weight: 600;
+  border-left: 4px solid #2563eb;
+  padding-left: 1rem;
+}
+
+body[data-theme="bauhaus"] .app-card {
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+}
+
+body[data-theme="bauhaus"] .app-card:nth-child(3n+1) {
+  border-top: 6px solid #e11d48;
+}
+
+body[data-theme="bauhaus"] .app-card:nth-child(3n+2) {
+  border-top: 6px solid #2563eb;
+}
+
+body[data-theme="bauhaus"] .app-card:nth-child(3n+3) {
+  border-top: 6px solid #f59e0b;
+}
+
+body[data-theme="bauhaus"] .app-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 5px 5px 0px #000000;
+}
+
+body[data-theme="bauhaus"] .card-icon {
+  background: #000000;
+  border: 2px solid #000000;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+body[data-theme="bauhaus"] .card-title {
+  color: #000000;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+body[data-theme="bauhaus"] .card-version {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  font-weight: 700;
+  border-radius: 0;
+}
+
+body[data-theme="bauhaus"] .card-category {
+  color: #e11d48;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+body[data-theme="bauhaus"] .card-tagline {
+  color: #1e293b;
   font-weight: 600;
 }
 
-body[data-theme="fintech"] .btn-download:hover {
+body[data-theme="bauhaus"] .card-foot {
+  border-top: 2px solid #000000;
+}
+
+body[data-theme="bauhaus"] .card-tech {
+  color: #475569;
+  font-weight: 700;
+}
+
+body[data-theme="bauhaus"] .card-links a {
+  color: #2563eb;
+  font-weight: 800;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+body[data-theme="bauhaus"] .btn-lock-auth {
   background: #ffffff;
+  border: 2px solid #000000;
+  color: #000000;
+  font-weight: 800;
+  border-radius: 0;
+}
+
+body[data-theme="bauhaus"] .btn-lock-auth:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+body[data-theme="bauhaus"] .btn-download {
+  background: #2563eb;
+  border: 2px solid #000000;
+  color: #ffffff;
+  font-weight: 900;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+body[data-theme="bauhaus"] .btn-download:hover {
+  background: #e11d48;
 }
 
 /* ==========================================================================
@@ -738,10 +853,11 @@ body[data-theme="fintech"] .btn-download:hover {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
-body[data-theme="terminal"] .dialog-frame {
-  background: #161b22;
-  color: #c9d1d9;
-  border-color: #30363d;
+body[data-theme="cyberdeck"] .dialog-frame {
+  background: #0d1411;
+  color: #00ff66;
+  border: 1.5px solid #00ff66;
+  box-shadow: 0 0 20px rgba(0, 255, 102, 0.3);
 }
 
 body[data-theme="neobrutalism"] .dialog-frame {
@@ -751,10 +867,18 @@ body[data-theme="neobrutalism"] .dialog-frame {
   box-shadow: 6px 6px 0px #000000;
 }
 
-body[data-theme="fintech"] .dialog-frame {
-  background: #0f141e;
-  color: #f8fafc;
-  border-color: rgba(255, 255, 255, 0.15);
+body[data-theme="editorial"] .dialog-frame {
+  background: #fbf8f3;
+  color: #1c1917;
+  border: 1px solid #d6d3d1;
+  box-shadow: 0 10px 30px rgba(41, 37, 36, 0.12);
+}
+
+body[data-theme="bauhaus"] .dialog-frame {
+  background: #ffffff;
+  color: #000000;
+  border: 3px solid #000000;
+  box-shadow: 8px 8px 0px #000000;
 }
 
 .dialog-frame h3 {
