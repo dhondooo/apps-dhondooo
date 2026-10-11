@@ -25,12 +25,12 @@
       </div>
 
       <div class="masthead-controls">
-        <!-- 4-Theme Switcher -->
-        <div class="theme-switcher" role="radiogroup" aria-label="Select Interface Style">
-          <button class="theme-btn active" data-set-theme="minimal-list" title="Minimal Directory (Linear style)">Minimal</button>
-          <button class="theme-btn" data-set-theme="terminal" title="Terminal (Developer style)">Terminal</button>
-          <button class="theme-btn" data-set-theme="neobrutalism" title="Neobrutalism (High contrast)">Neobrutal</button>
-          <button class="theme-btn" data-set-theme="fintech" title="Fintech (Charcoal luxury)">Fintech</button>
+        <!-- 4-Theme Switcher (Only visible to authenticated admin/user after unlocking) -->
+        <div id="themeSwitcher" class="theme-switcher" role="radiogroup" aria-label="Select Interface Style" style="display: none;">
+          <button class="theme-btn active" data-set-theme="minimal-list" title="Minimal Directory">Minimal</button>
+          <button class="theme-btn" data-set-theme="terminal" title="Terminal">Terminal</button>
+          <button class="theme-btn" data-set-theme="neobrutalism" title="Neobrutalism">Neobrutal</button>
+          <button class="theme-btn" data-set-theme="fintech" title="Fintech">Fintech</button>
         </div>
 
         <!-- Lock Control -->
@@ -93,6 +93,6 @@
     <p>&copy; 2026 Dhondooo &bull; Contact: <!--email_off--><a href="mailto:contact@apps.dhondooo.com">contact@apps.dhondooo.com</a><!--/email_off--></p>
   </footer>
 
-  <script src="/app.js"></script>
+  <script src="/app.js?v=3"></script>
 </body>
 </html>

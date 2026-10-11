@@ -1,4 +1,4 @@
-// Clean Vector Icons (Zero Emojis)
+// Vector Icons (Zero Emojis)
 const ICONS = {
   car: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 10.7 2 11.1 2 11.5V16c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>`,
   camera: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.934a.5.5 0 0 0-.777-.416L16 11"/><rect width="14" height="12" x="2" y="6" rx="2"/></svg>`,
@@ -14,15 +14,12 @@ const ICONS = {
   download: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>`
 };
 
+// State
 let appsCache = [];
 let currentTheme = localStorage.getItem("dhondooo_app_theme") || "minimal-list";
 let isUnlocked = localStorage.getItem("dhondooo_edge_auth") === "true";
 
-// Set initial theme
-document.body.setAttribute("data-theme", currentTheme);
-updateThemeButtons();
-
-// DOM elements
+// DOM Elements
 const directoryBody = document.getElementById("directoryBody");
 const lockToggleBtn = document.getElementById("lockToggleBtn");
 const lockIconWrap = document.getElementById("lockIconWrap");
@@ -32,9 +29,11 @@ const pinForm = document.getElementById("pinForm");
 const pinInput = document.getElementById("pinInput");
 const pinError = document.getElementById("pinError");
 const dialogDismissBtn = document.getElementById("dialogDismissBtn");
+const themeSwitcher = document.getElementById("themeSwitcher");
 const themeButtons = document.querySelectorAll(".theme-btn");
 
 function updateThemeButtons() {
+  if (!themeButtons) return;
   themeButtons.forEach(btn => {
     if (btn.dataset.setTheme === currentTheme) {
       btn.classList.add("active");
@@ -44,39 +43,55 @@ function updateThemeButtons() {
   });
 }
 
+function updateTheme(theme) {
+  currentTheme = theme;
+  document.body.setAttribute("data-theme", currentTheme);
+  localStorage.setItem("dhondooo_app_theme", currentTheme);
+  updateThemeButtons();
+}
+
+// Initial theme application
+document.body.setAttribute("data-theme", currentTheme);
+updateThemeButtons();
+
+// Theme switcher button listeners
 themeButtons.forEach(btn => {
   btn.addEventListener("click", () => {
-    currentTheme = btn.dataset.setTheme;
-    document.body.setAttribute("data-theme", currentTheme);
-    localStorage.setItem("dhondooo_app_theme", currentTheme);
-    updateThemeButtons();
+    updateTheme(btn.dataset.setTheme);
   });
 });
-
-async function loadApps() {
-  try {
-    const res = await fetch("/apps.json");
-    appsCache = await res.json();
-    render();
-  } catch (err) {
-    console.error("Failed to load apps directory:", err);
-  }
-}
 
 function updateLockUI() {
   if (isUnlocked) {
     lockIconWrap.innerHTML = ICONS.unlock;
     lockLabel.textContent = "Unlocked";
     lockToggleBtn.classList.add("is-unlocked");
+    if (themeSwitcher) {
+      themeSwitcher.style.display = "inline-flex";
+    }
   } else {
     lockIconWrap.innerHTML = ICONS.lock;
     lockLabel.textContent = "Locked";
     lockToggleBtn.classList.remove("is-unlocked");
+    if (themeSwitcher) {
+      themeSwitcher.style.display = "none";
+    }
   }
 }
 
 function render() {
   updateLockUI();
+
+  if (!appsCache || appsCache.length === 0) {
+    directoryBody.innerHTML = `
+      <div class="directory-row" style="padding: 2rem; text-align: center; color: #64748b;">
+        <span></span>
+        <span>Loading applications directory...</span>
+        <span></span><span></span><span></span>
+      </div>
+    `;
+    return;
+  }
 
   directoryBody.innerHTML = appsCache.map((app, index) => {
     const iconSvg = ICONS[app.icon] || ICONS.car;
@@ -102,7 +117,7 @@ function render() {
               <span>APK Binary</span>
             </a>
           ` : `
-            <button type="button" onclick="showAuthDialog()">
+            <button type="button" class="btn-lock-auth">
               ${ICONS.lock}
               <span>Locked</span>
             </button>
@@ -111,9 +126,15 @@ function render() {
       </div>
     `;
   }).join("");
+
+  // Attach click listeners to all locked buttons
+  document.querySelectorAll(".btn-lock-auth").forEach(btn => {
+    btn.addEventListener("click", showAuthDialog);
+  });
 }
 
 function showAuthDialog() {
+  if (!pinDialog) return;
   pinInput.value = "";
   pinError.hidden = true;
   pinError.textContent = "";
@@ -122,16 +143,21 @@ function showAuthDialog() {
   } else {
     pinDialog.setAttribute("open", "");
   }
-  pinInput.focus();
+  setTimeout(() => pinInput.focus(), 50);
 }
 
 function dismissAuthDialog() {
+  if (!pinDialog) return;
   if (typeof pinDialog.close === "function") {
     pinDialog.close();
   } else {
     pinDialog.removeAttribute("open");
   }
 }
+
+// Make accessible to window
+window.showAuthDialog = showAuthDialog;
+window.dismissAuthDialog = dismissAuthDialog;
 
 lockToggleBtn.addEventListener("click", () => {
   if (isUnlocked) {
@@ -173,4 +199,17 @@ pinForm.addEventListener("submit", async (e) => {
   }
 });
 
+async function loadApps() {
+  try {
+    const res = await fetch("/apps.json");
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    appsCache = await res.json();
+    render();
+  } catch (err) {
+    console.error("Failed to load apps directory:", err);
+  }
+}
+
+// Run immediately
+render();
 loadApps();
