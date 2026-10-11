@@ -82,51 +82,71 @@ function updateLockUI() {
   }
 }
 
+const directoryGrid = document.getElementById("directoryGrid");
+
 function render() {
   updateLockUI();
 
   if (!appsCache || appsCache.length === 0) {
-    directoryBody.innerHTML = `
-      <div class="directory-row" style="padding: 2rem; text-align: center; color: #64748b;">
-        <span></span>
-        <span>Loading applications directory...</span>
-        <span></span><span></span><span></span>
-      </div>
-    `;
+    if (directoryGrid) {
+      directoryGrid.innerHTML = `
+        <div class="apps-loading">
+          <p>Loading applications directory...</p>
+        </div>
+      `;
+    }
     return;
   }
 
-  directoryBody.innerHTML = appsCache.map((app, index) => {
+  if (!directoryGrid) return;
+
+  directoryGrid.innerHTML = appsCache.map((app, index) => {
     const iconSvg = ICONS[app.icon] || ICONS.car;
     const itemNum = String(index + 1).padStart(2, "0");
     return `
-      <div class="directory-row">
-        <span style="font-family: var(--font-mono); opacity: 0.5;">${itemNum}</span>
-        <div class="app-name-wrap">
-          <span style="color: ${app.color}; display: flex; align-items: center;">${iconSvg}</span>
-          <span class="app-name-text">${app.name}</span>
-          <span class="app-badge-version">${app.badge}</span>
+      <article class="app-card" data-app-id="${app.id}">
+        <div class="card-head">
+          <div class="card-identity">
+            <span class="card-icon" style="color: ${app.color};">
+              ${iconSvg}
+            </span>
+            <div class="card-titles">
+              <div class="card-title-row">
+                <h2 class="card-title">${app.name}</h2>
+                <span class="card-version">${app.badge}</span>
+              </div>
+              <span class="card-category">${app.category}</span>
+            </div>
+          </div>
+          <div class="card-action">
+            ${isUnlocked ? `
+              <a href="${app.apkUrl}" class="btn-download" download>
+                ${ICONS.download}
+                <span>APK Binary</span>
+              </a>
+            ` : `
+              <button type="button" class="btn-lock-auth" aria-label="Unlock ${app.name} downloads">
+                ${ICONS.lock}
+                <span>Locked</span>
+              </button>
+            `}
+          </div>
         </div>
-        <div class="tagline-col">${app.tagline}</div>
-        <div class="links-col">
-          <a href="${app.docsUrl}" target="_blank" rel="noopener">Overview</a>
-          <a href="${app.docsUrl}/privacy-policy" target="_blank" rel="noopener">Privacy</a>
-          <a href="${app.docsUrl}/terms" target="_blank" rel="noopener">Terms</a>
+
+        <p class="card-tagline">${app.tagline}</p>
+        <p class="card-desc">${app.desc}</p>
+
+        <div class="card-foot">
+          <div class="card-tech">
+            <span>${app.tech}</span>
+          </div>
+          <nav class="card-links" aria-label="${app.name} links">
+            <a href="${app.docsUrl}" target="_blank" rel="noopener">Overview</a>
+            <a href="${app.docsUrl}/privacy-policy" target="_blank" rel="noopener">Privacy</a>
+            <a href="${app.docsUrl}/terms" target="_blank" rel="noopener">Terms</a>
+          </nav>
         </div>
-        <div class="download-col">
-          ${isUnlocked ? `
-            <a href="${app.apkUrl}" class="unlocked-btn" download>
-              ${ICONS.download}
-              <span>APK Binary</span>
-            </a>
-          ` : `
-            <button type="button" class="btn-lock-auth">
-              ${ICONS.lock}
-              <span>Locked</span>
-            </button>
-          `}
-        </div>
-      </div>
+      </article>
     `;
   }).join("");
 
