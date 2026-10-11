@@ -672,14 +672,13 @@ body[data-theme="fintech"] .btn-download:hover {
 
 .card-tagline {
   font-size: 0.875rem;
-  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex: 1;
 }
 
 .card-desc {
-  font-size: 0.825rem;
-  line-height: 1.55;
-  margin-bottom: 1.25rem;
-  flex: 1;
+  display: none;
 }
 
 .card-foot {

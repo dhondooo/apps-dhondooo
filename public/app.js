@@ -18,7 +18,7 @@ const ICONS = {
 // State
 let appsCache = [];
 let currentTheme = localStorage.getItem("dhondooo_app_theme") || "minimal-list";
-let isUnlocked = localStorage.getItem("dhondooo_edge_auth") === "true";
+let isUnlocked = localStorage.getItem("dhondooo_edge_auth") === "true" || document.cookie.includes("dhondooo_edge_auth=true");
 
 // DOM Elements
 const directoryBody = document.getElementById("directoryBody");
@@ -103,7 +103,7 @@ function render() {
 
   directoryGrid.innerHTML = appsCache.map((app, index) => {
     const iconSvg = ICONS[app.icon] || ICONS.car;
-    const itemNum = String(index + 1).padStart(2, "0");
+    const overviewUrl = isUnlocked ? `${app.docsUrl}?unlocked=true` : app.docsUrl;
     return `
       <article class="app-card" data-app-id="${app.id}">
         <div class="card-head">
@@ -135,14 +135,13 @@ function render() {
         </div>
 
         <p class="card-tagline">${app.tagline}</p>
-        <p class="card-desc">${app.desc}</p>
 
         <div class="card-foot">
           <div class="card-tech">
             <span>${app.tech}</span>
           </div>
           <nav class="card-links" aria-label="${app.name} links">
-            <a href="${app.docsUrl}" target="_blank" rel="noopener">Overview</a>
+            <a href="${overviewUrl}" target="_blank" rel="noopener">Overview</a>
             <a href="${app.docsUrl}/privacy-policy" target="_blank" rel="noopener">Privacy</a>
             <a href="${app.docsUrl}/terms" target="_blank" rel="noopener">Terms</a>
           </nav>
@@ -187,6 +186,7 @@ lockToggleBtn.addEventListener("click", () => {
   if (isUnlocked) {
     isUnlocked = false;
     localStorage.removeItem("dhondooo_edge_auth");
+    document.cookie = "dhondooo_edge_auth=; path=/; domain=.dhondooo.com; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax";
     render();
   } else {
     showAuthDialog();
@@ -228,6 +228,7 @@ pinForm.addEventListener("submit", async (e) => {
     if (success) {
       isUnlocked = true;
       localStorage.setItem("dhondooo_edge_auth", "true");
+      document.cookie = "dhondooo_edge_auth=true; path=/; domain=.dhondooo.com; max-age=31536000; SameSite=Lax";
       dismissAuthDialog();
       render();
     } else {
