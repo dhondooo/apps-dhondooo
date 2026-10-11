@@ -10,7 +10,7 @@
     "icon": "car",
     "desc": "Keeps an encrypted, deterministic service history for all your vehicles on-device. Log maintenance events, track fuel economy trends, and audit depreciation without cloud sync or user accounts.",
     "docsUrl": "https://car-logs.dhondooo.com",
-    "apkUrl": "https://github.com/dhondooo/car-logs/releases/download/latest/CarLogs.apk"
+    "apkUrl": "https://github.com/dhondooo/car-logs/releases/latest/download/CarLogs.apk"
   },
   {
     "id": "credit-card-statement-analyzer",
@@ -18,17 +18,17 @@
     "category": "Finance",
     "tagline": "Private client-side PDF statement parser & fee intelligence",
     "badge": "v1.0.0",
-    "tech": "React Native • Next.js • Wasm PDF",
+    "tech": "Next.js • React Native • Wasm PDF",
     "color": "#3b82f6",
     "icon": "card",
     "desc": "Parse bank statement PDFs completely client-side in memory. Detect hidden fees, visualize recurring merchant charges, and calculate finance charges with zero telemetry transmission.",
     "docsUrl": "https://credit-card-analyzer.dhondooo.com",
-    "apkUrl": "https://github.com/dhondooo/credit-card-statement-analyzer/releases/download/latest/CreditCardAnalyzer.apk"
+    "apkUrl": "https://github.com/dhondooo/credit-card-statement-analyzer/releases/latest/download/CreditCardAnalyzer.apk"
   },
   {
     "id": "kirkut",
     "name": "Kirkut",
-    "category": "Lifestyle",
+    "category": "Sports",
     "tagline": "Real-time ball-by-ball cricket scoring companion",
     "badge": "v1.0.0",
     "tech": "React Native • Expo 52",
@@ -36,84 +36,84 @@
     "icon": "cricket",
     "desc": "Minimalist, high-throughput cricket score tracking. Features tournament brackets, wagon-wheel analytics, and instant run-rate projections.",
     "docsUrl": "https://kirkut.dhondooo.com",
-    "apkUrl": "https://github.com/dhondooo/Kirkut/releases/download/latest/Kirkut.apk"
+    "apkUrl": "https://github.com/dhondooo/Kirkut/releases/latest/download/Kirkut.apk"
   },
   {
     "id": "fire-tracker",
-    "name": "Fire Tracker",
-    "category": "Utility",
-    "tagline": "Satellite thermal anomaly & perimeter telemetry",
+    "name": "FIRE Tracker",
+    "category": "Finance",
+    "tagline": "PSX portfolio & retirement milestone telemetry",
     "badge": "v1.0.0",
-    "tech": "React Native • MapLibre",
+    "tech": "React Native • Expo • Deno Server",
     "color": "#f97316",
     "icon": "flame",
-    "desc": "Aggregates thermal sensor feeds and fire perimeters for situational outdoor awareness with local cached tile storage.",
+    "desc": "Portfolio and retirement tracking system tailored for the Pakistan Stock Exchange (PSX). Parses broker statements, calculates net worth, models safe withdrawal rates, and charts your trajectory toward Financial Independence.",
     "docsUrl": "https://fire-tracker.dhondooo.com",
-    "apkUrl": "https://github.com/dhondooo/fire-tracker/releases/download/latest/FIRETracker.apk"
+    "apkUrl": "https://github.com/dhondooo/fire-tracker/releases/latest/download/FIRETracker.apk"
   },
   {
     "id": "irlcameratools",
     "name": "IRL Camera Tools",
     "category": "Utility",
-    "tagline": "Live streamer camera companion & bitrate monitor",
+    "tagline": "15-in-1 sensor, optical & camera utility toolkit",
     "badge": "v1.0.0",
-    "tech": "React Native • RTMP/SRT",
+    "tech": "React Native • Expo • ML Kit",
     "color": "#8b5cf6",
     "icon": "camera",
-    "desc": "Streamline mobile broadcasting with live bitrate health indicators, automated fallback scenes, and remote camera control.",
+    "desc": "Fifteen on-device camera and sensor tools in one zero-dependency app: QR/Barcode scanner, OCR text extractor, color picker, light meter, bubble level, and sensor diagnostics with zero server dependencies.",
     "docsUrl": "https://irlcameratools.dhondooo.com",
-    "apkUrl": "https://github.com/dhondooo/IRLCameraTools/releases/download/latest/IRLCameraTools.apk"
+    "apkUrl": "https://github.com/dhondooo/IRLCameraTools/releases/latest/download/IRLCameraTools.apk"
   },
   {
     "id": "openray",
     "name": "OpenRay",
-    "category": "Utility",
-    "tagline": "Open mobile radiometry & environmental radiation monitor",
+    "category": "AI & Wearables",
+    "tagline": "Multimodal AI platform for Ray-Ban Meta smart glasses",
     "badge": "v1.0.0",
-    "tech": "React Native • Expo 52",
+    "tech": "Android Native • Meta DAT • Gemini 2.0 Flash",
     "color": "#f59e0b",
-    "icon": "radiation",
-    "desc": "Interprets sensor inputs from open radiation monitoring networks. Visualizes ambient background dose rate and statistical decay deviations.",
+    "icon": "glasses",
+    "desc": "Transforms Ray-Ban Meta smart glasses into an unrestricted multimodal AI assistant powered by Google Gemini 2.0 Flash. Bypasses regional lockouts with direct Meta Device Access Toolkit integration.",
     "docsUrl": "https://openray.dhondooo.com",
-    "apkUrl": "https://github.com/dhondooo/openray/releases/download/latest/OpenRay.apk"
+    "apkUrl": "https://github.com/dhondooo/openray/releases/latest/download/OpenRay.apk"
   },
   {
     "id": "touch-grass",
     "name": "Touch Grass",
-    "category": "Lifestyle",
-    "tagline": "Mindful outdoor habit tracker & digital wellness",
+    "category": "Health & Fitness",
+    "tagline": "Burn outside, binge inside screen-time quota ledger",
     "badge": "v1.0.0",
-    "tech": "React Native • Expo 57",
+    "tech": "React Native • Expo 52 • Pedometer",
     "color": "#14b8a6",
     "icon": "leaf",
-    "desc": "Encourages screen-free nature routines. Log nature walks, track circadian streaks, and foster calm presence with zero social feeds.",
+    "desc": "Turns physical outdoor activity and calories burned into earned, guilt-free indoor leisure time. Calculates your exact screen-time, anime, and gaming quota from real workout metrics.",
     "docsUrl": "https://touch-grass.dhondooo.com",
-    "apkUrl": "https://github.com/dhondooo/touch-grass/releases/download/latest/TouchGrass.apk"
+    "apkUrl": "https://github.com/dhondooo/touch-grass/releases/latest/download/TouchGrass.apk"
   },
   {
     "id": "apni-awaz",
     "name": "Apni Awaz",
-    "category": "Lifestyle",
-    "tagline": "High-fidelity encrypted offline voice journaling",
+    "category": "Productivity",
+    "tagline": "Local-first voice dictation & BYOM/BYOK LLM companion",
     "badge": "v1.0.0",
-    "tech": "React Native • Expo 52 • Audio",
+    "tech": "Jetpack Compose • Material 3 • Android STT",
     "color": "#ec4899",
     "icon": "mic",
-    "desc": "Voice recorder with native DSP noise reduction. Audio tracks and transcripts are encrypted in device sandbox storage.",
+    "desc": "Voice dictation with hardware DSP noise reduction and a clean Bring Your Own Model (BYOM) framework. Transcribe voice input and format it with your preferred LLMs and custom system prompts with zero tracking.",
     "docsUrl": "https://apni-awaz.dhondooo.com",
-    "apkUrl": "https://github.com/dhondooo/apni-awaz/releases/download/latest/ApniAwaz.apk"
+    "apkUrl": "https://github.com/dhondooo/apni-awaz/releases/latest/download/ApniAwaz.apk"
   },
   {
     "id": "shandaar-sale-app",
     "name": "Shandaar Sale",
-    "category": "Finance",
+    "category": "Shopping",
     "tagline": "Verified price tracking, discounts & retail catalog engine",
     "badge": "v1.0.0",
-    "tech": "React Native • Expo 51 • Bare Android",
+    "tech": "React Native • Expo 51 • Bare Android • Deno",
     "color": "#ef4444",
     "icon": "cart",
-    "desc": "Aggregates verified retailer promotions, tracks seasonal flash price adjustments, and notifies on price drops without behavioral tracking.",
+    "desc": "Retail deals aggregator for Pakistan pulling real-time promotions across top national brands and shopping hubs in Karachi, Lahore, and Islamabad with clean, direct retailer destinations and zero behavioral tracking.",
     "docsUrl": "https://shandaar-sale.dhondooo.com",
-    "apkUrl": "https://github.com/dhondooo/shandaar-sale/releases/download/latest/ShandaarSale.apk"
+    "apkUrl": "https://github.com/dhondooo/shandaar-sale/releases/latest/download/ShandaarSale.apk"
   }
 ]

@@ -611,6 +611,8 @@ body[data-theme="fintech"] .btn-download:hover {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  min-width: 0;
+  flex: 1;
 }
 
 .card-icon {
@@ -626,6 +628,7 @@ body[data-theme="fintech"] .btn-download:hover {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+  min-width: 0;
 }
 
 .card-title-row {
@@ -828,6 +831,19 @@ body[data-theme="fintech"] .dialog-frame {
 @media (max-width: 640px) {
   .masthead-inner {
     padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .masthead-controls {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .theme-switcher {
+    flex-wrap: wrap;
   }
 
   .page-container {
