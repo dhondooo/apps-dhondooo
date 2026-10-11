@@ -11,7 +11,7 @@
     "icon": "car",
     "desc": "Keeps an encrypted, deterministic service history for all your vehicles on-device. Log maintenance events, track fuel economy trends, and audit depreciation without cloud sync or user accounts.",
     "docsUrl": "https://car-logs.pages.dev",
-    "apkUrl": "https://github.com/dhondooo/car-logs/releases/download/latest/app-release.apk"
+    "apkUrl": "https://github.com/dhondooo/car-logs/releases/download/latest/CarLogs.apk"
   },
   {
     "id": "credit-card-statement-analyzer",
@@ -25,7 +25,7 @@
     "icon": "card",
     "desc": "Parse bank statement PDFs completely client-side in memory. Detect hidden fees, visualize recurring merchant charges, and calculate finance charges with zero telemetry transmission.",
     "docsUrl": "https://credit-card-statement-analyzer.pages.dev",
-    "apkUrl": "https://github.com/dhondooo/credit-card-statement-analyzer/releases/download/latest/app-release.apk"
+    "apkUrl": "https://github.com/dhondooo/credit-card-statement-analyzer/releases/download/latest/CreditCardAnalyzer.apk"
   },
   {
     "id": "kirkut",
@@ -39,7 +39,7 @@
     "icon": "cricket",
     "desc": "Minimalist, high-throughput cricket score tracking. Features tournament brackets, wagon-wheel analytics, and instant run-rate projections.",
     "docsUrl": "https://kirkut.pages.dev",
-    "apkUrl": "https://github.com/dhondooo/Kirkut/releases/download/latest/app-release.apk"
+    "apkUrl": "https://github.com/dhondooo/Kirkut/releases/download/latest/Kirkut.apk"
   },
   {
     "id": "fire-tracker",
@@ -53,7 +53,7 @@
     "icon": "flame",
     "desc": "Aggregates thermal sensor feeds and fire perimeters for situational outdoor awareness with local cached tile storage.",
     "docsUrl": "https://fire-tracker.pages.dev",
-    "apkUrl": "https://github.com/dhondooo/fire-tracker/releases/download/latest/app-release.apk"
+    "apkUrl": "https://github.com/dhondooo/fire-tracker/releases/download/latest/FIRETracker.apk"
   },
   {
     "id": "irlcameratools",
@@ -67,7 +67,7 @@
     "icon": "camera",
     "desc": "Streamline mobile broadcasting with live bitrate health indicators, automated fallback scenes, and remote camera control.",
     "docsUrl": "https://irlcameratools.pages.dev",
-    "apkUrl": "https://github.com/dhondooo/IRLCameraTools/releases/download/latest/app-release.apk"
+    "apkUrl": "https://github.com/dhondooo/IRLCameraTools/releases/download/latest/IRLCameraTools.apk"
   },
   {
     "id": "openray",
@@ -81,7 +81,7 @@
     "icon": "radiation",
     "desc": "Interprets sensor inputs from open radiation monitoring networks. Visualizes ambient background dose rate and statistical decay deviations.",
     "docsUrl": "https://openray.pages.dev",
-    "apkUrl": "https://github.com/dhondooo/openray/releases/download/latest/app-release.apk"
+    "apkUrl": "https://github.com/dhondooo/openray/releases/download/latest/OpenRay.apk"
   },
   {
     "id": "touch-grass",
@@ -109,7 +109,7 @@
     "icon": "mic",
     "desc": "Voice recorder with native DSP noise reduction. Audio tracks and transcripts are encrypted in device sandbox storage.",
     "docsUrl": "https://apni-awaz.pages.dev",
-    "apkUrl": "https://github.com/dhondooo/apni-awaz/releases/download/latest/app-release.apk"
+    "apkUrl": "https://github.com/dhondooo/apni-awaz/releases/download/latest/ApniAwaz.apk"
   },
   {
     "id": "shandaar-sale-app",
@@ -123,6 +123,6 @@
     "icon": "cart",
     "desc": "Aggregates verified retailer promotions, tracks seasonal flash price adjustments, and notifies on price drops without behavioral tracking.",
     "docsUrl": "https://shandaar-sale-app.pages.dev",
-    "apkUrl": "https://github.com/dhondooo/shandaar-sale/releases/download/latest/app-release.apk"
+    "apkUrl": "https://github.com/dhondooo/shandaar-sale/releases/download/latest/ShandaarSale.apk"
   }
 ]
